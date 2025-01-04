@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { Card } from "@/components/ui/card";
 import React from "react";
 
