@@ -2,6 +2,7 @@ import React from "react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 
 type Props = {
   fromCurrentUser: boolean;
@@ -47,6 +48,9 @@ const Message = ({
             <p className="text-wrap break-words whitespace-pre-wrap break-all">
               {content}
             </p>
+          ) : null}
+          {type === "call" ? (
+            <Badge variant="secondary">Joined Call</Badge>
           ) : null}
           <div
             className={cn("flex items-center w-full", {
